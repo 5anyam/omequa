@@ -108,30 +108,6 @@ export default function ComingSoon() {
 
   return (
     <>
-      {/* Ticker */}
-      <div className="bg-blue-900 text-white py-2.5 overflow-hidden fixed top-0 left-0 right-0 z-50">
-        <div className="ticker-wrap">
-          <div className="ticker-content text-xs font-medium tracking-wide">
-            {[
-              "🧬 Lab Tested & Certified",
-              "🌊 Sustainably Sourced",
-              "⚡ 4X Strength Formula",
-              "🛡️ Triglyceride Form for Better Absorption",
-              "🌿 Enhanced with Vit D3, E & Astaxanthin",
-              "🚀 Launching Soon",
-            ].flatMap((t, i) => [
-              <span key={`a${i}`} className="inline-flex items-center mx-8 text-blue-100">{t}</span>,
-              <span key={`d${i}`} className="text-blue-600 mx-2">◆</span>,
-            ]).concat(
-              ["🧬 Lab Tested & Certified", "🌊 Sustainably Sourced", "⚡ 4X Strength Formula", "🛡️ Triglyceride Form", "🌿 Enhanced with Vit D3", "🚀 Launching Soon"].flatMap((t, i) => [
-                <span key={`b${i}`} className="inline-flex items-center mx-8 text-blue-100">{t}</span>,
-                <span key={`e${i}`} className="text-blue-600 mx-2">◆</span>,
-              ])
-            )}
-          </div>
-        </div>
-      </div>
-
       <main className="min-h-screen hero-gradient flex items-center justify-center px-4 pt-10 pb-16 relative overflow-hidden">
         {/* Background */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -239,6 +215,29 @@ export default function ComingSoon() {
           </div>
         </div>
       </main>
+      {/* Ticker */}
+      <div className="bg-blue-900 text-white py-2.5 overflow-hidden fixed bottom-0 left-0 right-0 z-50">
+        <div className="ticker-wrap">
+          <div className="ticker-content text-xs font-medium tracking-wide">
+            {[
+              "🧬 Lab Tested & Certified",
+              "🌊 Sustainably Sourced",
+              "⚡ 4X Strength Formula",
+              "🛡️ Triglyceride Form for Better Absorption",
+              "🌿 Enhanced with Vit D3, E & Astaxanthin",
+              "🚀 Launching Soon",
+            ].flatMap((t, i) => [
+              <span key={`a${i}`} className="inline-flex items-center mx-8 text-blue-100">{t}</span>,
+              <span key={`d${i}`} className="text-blue-600 mx-2">◆</span>,
+            ]).concat(
+              ["🧬 Lab Tested & Certified", "🌊 Sustainably Sourced", "⚡ 4X Strength Formula", "🛡️ Triglyceride Form", "🌿 Enhanced with Vit D3", "🚀 Launching Soon"].flatMap((t, i) => [
+                <span key={`b${i}`} className="inline-flex items-center mx-8 text-blue-100">{t}</span>,
+                <span key={`e${i}`} className="text-blue-600 mx-2">◆</span>,
+              ])
+            )}
+          </div>
+        </div>
+      </div>
     </>
   );
 }
